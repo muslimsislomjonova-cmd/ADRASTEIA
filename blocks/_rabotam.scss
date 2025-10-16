@@ -1,0 +1,103 @@
+.work-process {
+  display: flex;
+  justify-content: space-between;
+  padding: 80px 100px;
+  flex-wrap: wrap;
+}
+
+.text-section {
+  max-width: 400px;
+
+  h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 50px;
+  }
+
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .step {
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      border: 1px solid #e1e1e1;
+      border-radius: 10px;
+      width: 320px;
+      position: relative;
+
+      .icon {
+        font-size: 15px;
+        margin-right: 5px;
+      }
+
+      .desc {
+        p {
+          margin: 0;
+          font-size: 16px;
+        }
+        .number {
+          position: absolute;
+          top: 10px;
+          right: 15px;
+          font-size: 14px;
+          color: #999;
+        }
+      }
+    }
+  }
+}
+
+.cubes {
+  display: flex;
+  align-items: flex-end;
+  width: 600px;
+  height: 300px;
+  gap: 40px;
+
+
+  .cube {
+    width: 100px;
+    height: 100px;
+    background: #f5f5f5;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .cube-icon {
+      font-size: 28px;
+    }
+
+    &.dark {
+      background: #0f1633;
+      .cube-icon {
+        color: white;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 760px) {
+  .work-process {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+  }
+
+  .text-section {
+    align-items: center;
+    text-align: center;
+
+    .steps .step {
+      width: 100%;
+    }
+  }
+
+  .cubes {
+    margin-top: 40px;
+  }
+}

@@ -1,0 +1,104 @@
+.clients {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  background-color: #f5eff2;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+
+  .clients-left {
+    width: 200px;
+
+    h2 {
+      font-size: 36px;
+      color: #1e1e3a;
+      margin: 0;
+    }
+  }
+
+  .clients-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    width: calc(2 * 240px + 40px); // 2 card widths + 1 gap = 520px
+
+    .card {
+      width: 240px;
+      height: 240px;
+      background-color: #fdf6f8;
+      border-radius: 24px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .icon {
+        width: 48px;
+        height: 48px;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      p {
+        font-size: 16px;
+        color: #8a8496;
+        margin: 0;
+      }
+    }
+  }
+
+  .clients-note {
+    position: absolute;
+    right: 60px;
+    top: 60px;
+    width: 220px;
+
+    p {
+      font-size: 16px;
+      color: #8a8496;
+      line-height: 24px;
+      margin: 0;
+    }
+  }
+
+  // Tablet responsive (max-width: 768px)
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+
+    .clients-left {
+      width: 100%;
+      text-align: center;
+
+      h2 {
+        font-size: 28px;
+      }
+    }
+
+    .clients-cards {
+      width: 100%;
+      justify-content: center;
+
+      .card {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        align-items: center;
+        text-align: center;
+      }
+    }
+
+    .clients-note {
+      position: static;
+      margin-top: 40px;
+      text-align: center;
+    }
+  }
+}
